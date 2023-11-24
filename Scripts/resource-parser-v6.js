@@ -344,6 +344,9 @@ function serverNameReplace(tag){
         "Kazakhstan":"哈萨克斯坦",
         "Luxembourg":"卢森堡",
         "Moldova":"摩尔多瓦",
+        "Türkiye":"土耳其",
+        "España":"西班牙",
+        "Italia":"意大利",
     }
 
     for (var key in rr) {
