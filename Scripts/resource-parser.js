@@ -239,6 +239,97 @@ var ProfileInfo = {
     "rewrite":""
 }
 
+function serverNameReplace(tag){
+    var rr = {
+        "Media":"流媒体",
+        "HK": "香港",
+        "Hong Kong": "香港",
+        "Taiwan":"台湾",
+        "TW":"台湾",
+        "Singapore":"新加坡",
+        "SG":"新加坡",
+        "Japan":"日本",
+        "JP":"日本",
+        "Korea":"韩国",
+        "South Korea":"韩国",
+        "KR":"韩国",
+        "United States":"美国",
+        "US":"美国",
+        "Canada": "加拿大",
+        "CA": "加拿大",
+        "Australia": "澳大利亚",
+        "AU": "澳大利亚",
+        "United Kingdom": "英国",
+        "UK": "英国",
+        "Germany": "德国",
+        "DE": "德国",
+        "France": "法国",
+        "FR": "法国",
+        "Italy": "意大利",
+        "IT": "意大利",
+        "Spain": "西班牙",
+        "ES": "西班牙",
+        "Netherlands": "荷兰",
+        "NL": "荷兰",
+        "Switzerland": "瑞士",
+        "CH": "瑞士",
+        "Sweden": "瑞典",
+        "SE": "瑞典",
+        "Norway": "挪威",
+        "NO": "挪威",
+        "Denmark": "丹麦",
+        "DK": "丹麦",
+        "Finland": "芬兰",
+        "FI": "芬兰",
+        "India": "印度",
+        "IN": "印度",
+        "Brazil": "巴西",
+        "BR": "巴西",
+        "Mexico": "墨西哥",
+        "MX": "墨西哥",
+        "Russia": "俄罗斯",
+        "RU": "俄罗斯",
+        "South Korea": "韩国",
+        "KR": "韩国",
+        "Turkey": "土耳其",
+        "TR": "土耳其",
+        "Argentina": "阿根廷",
+        "AR": "阿根廷",
+        "Egypt": "埃及",
+        "EG": "埃及",
+        "South Africa": "南非",
+        "ZA": "南非",
+        "Saudi Arabia": "沙特阿拉伯",
+        "SA": "沙特阿拉伯",
+        "Iran": "伊朗",
+        "IR": "伊朗",
+        "Israel": "以色列",
+        "IL": "以色列",
+        "Pakistan": "巴基斯坦",
+        "PK": "巴基斯坦",
+        "Vietnam": "越南",
+        "VN": "越南",
+        "Philippines": "菲律宾",
+        "PH": "菲律宾",
+        "Indonesia": "印度尼西亚",
+        "ID": "印度尼西亚",
+        "Malaysia": "马来西亚",
+        "MY": "马来西亚",
+        "Thailand": "泰国",
+        "TH": "泰国",
+        "Greece": "希腊",
+        "GR": "希腊",
+        "New Zealand": "新西兰",
+        "NZ": "新西兰"
+    }
+
+    for (var key in rr) {
+        tag = tag.replace(key,replace[key])
+    }
+
+    return tag;
+}
+
 function VCheck(cnt) {
     cnts=cnt.split("\n").filter(Boolean).map(item=>item.trim()).filter(item => /^http/.test(item)).map(item=>"\""+item+"\"")
     cnts=cnts.join(",\n")
@@ -2202,8 +2293,7 @@ function QXFix(cntf) {
                 cntis[i].indexOf("tag=") != 0? cntii += cntis[i]+", ": cntii=cntii
             }
         }
-        tag = tag.replace("Hong Kong","香港")
-        tag = tag.replace("Media","流媒体")
+        tag = serverNameReplace(tag)
         cntii = cntii+tag+tagfix
         //$notify("tag-fix","Look","cntf:\n"+cntf+"\nhd:\n"+hd+"\ntag:\n"+tag+"\ntail:\n"+tail+"\ncnti: \n"+cnti +"\n\ncntii: \n"+cntii)
         return cntii
