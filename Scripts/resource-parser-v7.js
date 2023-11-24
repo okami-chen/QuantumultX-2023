@@ -239,6 +239,9 @@ var ProfileInfo = {
     "rewrite":""
 }
 
+function addSpaceBetweenAlphaNumeric(input) {
+    return input.replace(/([A-Za-z])(\d+)/g, (match, p1, p2) => p1 + ' ' + p2.padStart(2, '0'));
+}
 function serverNameReplace(tag){
     var rr = {
         "Media":"流媒体",
@@ -349,6 +352,7 @@ function serverNameReplace(tag){
         "Italia":"意大利",
     }
 
+    tag = addSpaceBetweenAlphaNumeric(tag)
     for (var key in rr) {
         tag = tag.replace(new RegExp(key, 'g'), rr[key]);
     }
