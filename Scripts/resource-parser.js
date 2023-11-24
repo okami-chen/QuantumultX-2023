@@ -2037,6 +2037,8 @@ function SSR2QX(subs, Pudp, Ptfo) {
         tag = "tag=" + (Base64.decode(cnt.split("remarks=")[1].split("&")[0].replace(/-/g, "+").replace(/_/g, "/"))).split("\u0000")[0]
         pudp = Pudp == 1 ? "udp-relay=true" : "udp-relay=false";
         ptfo = Ptfo == 1 ? "fast-open=true" : "fast-open=false";
+        tag = tag.replace("Hong Kong", "香港");
+        tag = tag.replace("Media", "流媒体");
         nssr.push(type + ip, pwd, mtd, obfs , obfshost, oparam, ssrp, pudp, ptfo, tag)
         QX = nssr.filter(Boolean).join(", ")
     } else { QX = "" }
@@ -2137,6 +2139,8 @@ function SS2QX(subs, Pudp, Ptfo) {
     tag = decodeURIComponent(cnt.split("#")[1])!="undefined"? "tag=" + decodeURIComponent(cnt.split("#")[1]) : "tag=" + ip
     pudp = Pudp == 1 ? "udp-relay=true" : "udp-relay=false";
     ptfo = Ptfo == 1 ? "fast-open=true" : "fast-open=false";
+    tag = tag.replace("Hong Kong", "香港");
+    tag = tag.replace("Media", "流媒体");
     nssr.push(type + ip, pwd, mtd + obfs + obfshost, pudp, ptfo, tag)
     QX = nssr.join(", ")
     if(Pdbg==1) {$notify("SS","content",cnt+"\n"+QX)}
