@@ -320,7 +320,10 @@ function serverNameReplace(tag){
         "Greece": "希腊",
         "GR": "希腊",
         "New Zealand": "新西兰",
-        "NZ": "新西兰"
+        "NZ": "新西兰",
+        "United Arab Emirates":"阿拉伯",
+        "UAE":"阿拉伯",
+        "Ukraine":"乌克兰",
     }
 
     for (var key in rr) {
