@@ -324,7 +324,7 @@ function serverNameReplace(tag){
         "United Arab Emirates":"阿拉伯",
         "UAE":"阿拉伯",
         "Ukraine":"乌克兰",
-        "lreland":"爱尔兰",
+        "Ireland":"爱尔兰",
         "Czech":"捷克",
         "Romania":"罗马尼亚",
         "Antarctica":"南极洲",
@@ -340,6 +340,10 @@ function serverNameReplace(tag){
         "Poland":"波兰",
         "Portugal":"葡萄牙",
         "Uzbekistan":"乌兹别克斯坦",
+        "Iceland":"冰岛",
+        "Kazakhstan":"哈萨克斯坦",
+        "Luxembourg":"卢森堡",
+        "Moldova":"摩尔多瓦",
     }
 
     for (var key in rr) {
@@ -2605,7 +2609,7 @@ function get_emoji(emojip, sname) {
         "🇱🇺": ["卢森堡", "盧森堡", "LU ", "Luxembourg"],
         "🇱🇻": ["Latvia", "Latvija", "拉脱维亚"],
         "🇧🇩": ["孟加拉", "Bengal"],
-        "🇲🇽️": [" MEX", "MX", "墨西哥", "Mexico", "MEXICO"],
+        "🇲🇽": [" MEX", "MX", "墨西哥", "Mexico", "MEXICO"],
         "🇲🇾": [" MY", "Malaysia","MALAYSIA", "马来西亚", "马来", "馬來", "大马", "大馬", "馬來西亞", "吉隆坡"],
         "🇲🇲": ["缅甸","緬甸"],
         "🇳🇮": ["尼加拉瓜"],
