@@ -240,7 +240,13 @@ var ProfileInfo = {
 }
 
 function addSpaceBetweenAlphaNumeric(input) {
-    return input.replace(/([A-Za-z])(\d+)/g, (match, p1, p2) => p1 + ' ' + p2.padStart(2, '0'));
+    return input.replace(/([A-Za-z])(\d+)?/g, (match, p1, p2) => {
+        if (p2) {
+            return p1 + ' - ' + p2.padStart(2, '0');
+        } else {
+            return p1 + ' - 01';
+        }
+    });
 }
 function serverNameReplace(tag){
     var rr = {
