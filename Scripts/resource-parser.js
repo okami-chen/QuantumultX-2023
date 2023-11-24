@@ -2080,6 +2080,8 @@ function TJ2QX(subs, Pudp, Ptfo, Pcert0, PTls13) {
       thost=cnt.indexOf("&host=") == -1? thost : "obfs-host=" + decodeURIComponent(cnt.split("&host=")[1].split("&")[0].split("#")[0])
       puri = cnt.indexOf("&path=") == -1? puri : "obfs-uri=" + decodeURIComponent(cnt.split("&path=")[1].split("&")[0].split("#")[0])
     }
+    tag = tag.replace("Hong Kong", "香港");
+    tag = tag.replace("Media", "流媒体");
     ntrojan.push(type + ip, pwd, obfs, pcert, thost, puri, pudp, ptfo, tag)
     QX = ntrojan.filter(Boolean).join(", ");
     //$notify("title","subtitle",QX)
@@ -2953,6 +2955,8 @@ function CSS2QX(cnt) {
     if (obfs == "obfs=wss") { // tls verification
       cert = Pcert0 == 1? "" : "tls-verification =false"}
   }
+  tag = tag.replace("Hong Kong", "香港");
+  tag = tag.replace("Media", "流媒体");
   node = "shadowsocks="+[ipt, pwd, mtd, udp, uot, tfo, obfs, ohost, ouri, cert, tag].filter(Boolean).join(", ")
   return node
 }
@@ -2983,7 +2987,8 @@ function CSSR2QX(cnt) {
   } else if (cnt["obfsparam"]) {
      ohost = "obfs-host=" + cnt["obfsparam"]
   }
- 
+  tag = tag.replace("Hong Kong", "香港");
+  tag = tag.replace("Media", "流媒体");
   node = "shadowsocks="+[ipt, pwd, mtd, udp, tfo, prot, ppara, obfs, ohost, tag].filter(Boolean).join(", ")
   //console.log(node)
   return node
@@ -3028,6 +3033,8 @@ function CV2QX(cnt) {
   } else if (Pcert0 != 1 && cnt.tls) {
     cert = "tls-verification=false"
   }
+  tag = tag.replace("Hong Kong", "香港");
+  tag = tag.replace("Media", "流媒体");
   node = "vmess="+[ipt, pwd, mtd, udp, tfo, obfs, ohost, ouri, cert, caead, tag].filter(Boolean).join(", ")
   //console.log(node)
   return node
@@ -3056,6 +3063,8 @@ function CT2QX(cnt) {
     }
     //$notify("trojan","WS",opath+":"+ohost)
   }
+  tag = tag.replace("Hong Kong", "香港");
+  tag = tag.replace("Media", "流媒体");
   node = "trojan="+[ipt, pwd, otls, opath, ohost, cert, tls13, udp, tfo, tag].filter(Boolean).join(", ")
   //console.log(node)
   return node
@@ -3075,6 +3084,8 @@ function CH2QX(cnt){
     } else if (Pcert0 != 1 && cnt.tls) {
       cert = "tls-verification=false"
     }
+    tag = tag.replace("Hong Kong", "香港");
+    tag = tag.replace("Media", "流媒体");
     node = "http="+[ipt, uname, pwd, tls, cert, tag].filter(Boolean).join(", ")
     //console.log(node)
     return node
