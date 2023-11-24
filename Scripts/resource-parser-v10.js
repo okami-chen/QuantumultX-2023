@@ -254,6 +254,7 @@ function serverNameReplace(tag){
         "Japan":"日本",
         "JP":"日本",
         "South Korea":"韩国",
+        "North Korea":"韩国",
         "Korea":"韩国",
         "KR":"韩国",
         "United States":"美国",
