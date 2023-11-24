@@ -324,7 +324,7 @@ function serverNameReplace(tag){
     }
 
     for (var key in rr) {
-        tag = tag.replace(key,replace[key])
+        tag = tag.replace(new RegExp(key, 'g'), rr[key]);
     }
 
     return tag;
