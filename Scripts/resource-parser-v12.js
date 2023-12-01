@@ -357,6 +357,7 @@ function serverNameReplace(tag){
         "Türkiye":"土耳其",
         "España":"西班牙",
         "Italia":"意大利",
+        "Colombia":"哥伦比亚",
     }
 
     tag = addSpaceBetweenAlphaNumeric(tag)
