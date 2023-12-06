@@ -359,9 +359,9 @@ function serverNameReplace(tag){
     "España":"西班牙",
     "Italia":"意大利",
     "Colombia":"哥伦比亚",
-    "Mumbai":"印度 孟买",
-    "Amsterdam":"荷兰 阿姆斯特丹",
-    "Aadrid":"西班牙 马德里",
+    "Mumbai":"印度%20孟买",
+    "Amsterdam":"荷兰%20阿姆斯特丹",
+    "Aadrid":"西班牙%20马德里",
 }
 
   tag = addSpaceBetweenAlphaNumeric(tag)
