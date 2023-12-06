@@ -360,7 +360,7 @@ function serverNameReplace(tag){
         "Colombia":"哥伦比亚",
         "Mumbai":"印度-孟买"，
         "Amsterdam":"荷兰-阿姆斯特丹",
-        "Aadrid":"西班牙-马德里"
+        "Aadrid":"西班牙-马德里",
     }
 
     tag = addSpaceBetweenAlphaNumeric(tag)
