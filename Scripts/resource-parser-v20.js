@@ -332,7 +332,7 @@ function serverNameReplace(tag){
     "New Zealand": "新西兰",
     "NZ": "新西兰",
     "United Arab Emirates":"阿拉伯",
-    "UA":"阿拉伯",
+    "AE":"阿拉伯",
     "UAE":"阿拉伯",
     "Ukraine":"乌克兰",
     "Ireland":"爱尔兰",
@@ -359,9 +359,9 @@ function serverNameReplace(tag){
     "España":"西班牙",
     "Italia":"意大利",
     "Colombia":"哥伦比亚",
-    "Mumbai":"印度%20孟买",
-    "Amsterdam":"荷兰%20阿姆斯特丹",
-    "Aadrid":"西班牙%20马德里",
+    "Mumbai":"印度",
+    "Amsterdam":"荷兰",
+    "Madrid":"西班牙",
 }
 
   tag = addSpaceBetweenAlphaNumeric(tag)
