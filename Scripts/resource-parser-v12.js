@@ -1,5 +1,5 @@
 /**
- ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-12-07 17:18⟧
+ ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-12-07 17:33⟧
 
  🤖 主要功能:
  ❶ 将其它格式的⟦服务器订阅⟧解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
@@ -364,11 +364,9 @@ function serverNameReplace(tag){
     "Madrid":"西班牙",
     '新加坡.GS' :'SG.GS',
     'X' :'x',
-    '[':'',
-    ']':'',
     "香港T":"HKT",
     "香港BN":"HKBN",
-}
+  }
 
   tag = addSpaceBetweenAlphaNumeric(tag)
   for (var key in rr) {
