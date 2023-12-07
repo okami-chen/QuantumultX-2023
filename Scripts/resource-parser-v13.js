@@ -362,6 +362,8 @@ function serverNameReplace(tag){
     "Mumbai":"印度",
     "Amsterdam":"荷兰",
     "Madrid":"西班牙",
+    "香港T":"HKT",
+    "香港BN":"HKBN",
 }
 
   tag = addSpaceBetweenAlphaNumeric(tag)
