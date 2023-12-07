@@ -251,6 +251,9 @@ function addSpaceBetweenAlphaNumeric(input) {
 function serverNameReplace(tag){
   var rr = {
     "Media":"流媒体",
+    "CM":"移动",
+    "CU":"联通",
+    "IEPL 中继":"IEPL",
     "HK": "香港",
     "Hong Kong": "香港",
     "Taiwan":"台湾",
@@ -362,8 +365,6 @@ function serverNameReplace(tag){
     "Mumbai":"印度",
     "Amsterdam":"荷兰",
     "Madrid":"西班牙",
-    "CM":"移动",
-    "CU":"联通",
 }
 
   tag = addSpaceBetweenAlphaNumeric(tag)
