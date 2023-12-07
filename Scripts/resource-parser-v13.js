@@ -362,6 +362,10 @@ function serverNameReplace(tag){
     "Mumbai":"印度",
     "Amsterdam":"荷兰",
     "Madrid":"西班牙",
+    '新加坡.GS' =>'SG.GS',
+    'X' =>'x',
+    '['=>'',
+    ']'=>'',
     "香港T":"HKT",
     "香港BN":"HKBN",
 }
