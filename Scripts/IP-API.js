@@ -42,31 +42,48 @@ var flags = new Map([[ "AC" , "🇦🇨" ] ,["AE","🇦🇪"], [ "AF" , "🇦�
 var body = $response.body;
 var obj = JSON.parse(body);
 
-var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['regionName']
+var url = "http://ip-api.com/json/"+obj["query"]+"?ang=zh-CN&fields=message,mobile,proxy,hosting,query"
+var opts = {
+  policy: $environment.params
+};
+var myRequest = {
+  url: url,
+  opts: opts,
+  timeout: 2000
+};
 
-var subtitle = obj['city'] + ' ' + obj['query'];
-var ip = obj['query'];
-var description = '\n';
-description = description + 'IP: '+ obj['query'] + '\n\n';
-description = description + '服务商: '+ obj['isp'] + '\n\n';
-description = description + '组织: '+ obj['asname'] + '\n\n';
+$task.fetch(myRequest).then(response => {
+  message = response? json2info(response.body,paras) : ""
+  let obj = JSON.parse(response.body)
+  var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['regionName']
 
-if (obj['hosting'] == false){
+  var subtitle = obj['city'] + ' ' + obj['query'];
+  var ip = obj['query'];
+  var description = '\n';
+  description = description + 'IP: '+ obj['query'] + '\n\n';
+  description = description + '服务商: '+ obj['isp'] + '\n\n';
+  description = description + '组织: '+ obj['asname'] + '\n\n';
 
-}
 
-if (obj['hosting'] == false){
-  description = description + '类型: 家宽\n\n';
-  title = title + ' 家宽'
-}else{
-  description = description + '类型: 机房\n\n';
-}
+  if (obj['hosting'] == false || obj['mobile'] == false){
+    description = description + '类型: 家宽\n\n';
+    title = title + ' 家宽'
+  }else{
+    description = description + '类型: 机房\n\n';
+  }
 
-description = description + '国家: '+ obj['country'] + '\n\n';
-description = description + '地区: '+ obj['regionName'] + '\n\n';
-description = description + '城市: '+ City_ValidCheck(obj['city']) + '\n\n';
-description = description + '邮编: '+ obj['zip'] + '\n\n';
-description = description + '时区: '+ obj['timezone'] + '\n\n';
-description = description + '经度: '+ obj['lon'] + '\n\n';
-description = description + '纬度: '+ obj['lat'] + '\n\n';
-$done({title, subtitle, ip, description});
+  description = description + '国家: '+ obj['country'] + '\n\n';
+  description = description + '地区: '+ obj['regionName'] + '\n\n';
+  description = description + '城市: '+ City_ValidCheck(obj['city']) + '\n\n';
+  description = description + '邮编: '+ obj['zip'] + '\n\n';
+  description = description + '时区: '+ obj['timezone'] + '\n\n';
+  description = description + '经度: '+ obj['lon'] + '\n\n';
+  description = description + '纬度: '+ obj['lat'] + '\n\n';
+  $done({title, subtitle, ip, description});
+}, reason => {
+  message = "</br></br>🛑 查询超时"
+  message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`
+  $done({"title": "🔎  查询结果", "htmlMessage": message});
+})
+
+
