@@ -366,6 +366,7 @@ function serverNameReplace(tag){
     'X' :'x',
     "香港T":"HKT",
     "香港BN":"HKBN",
+    "加拿大T":"CAT",
   }
 
   tag = addSpaceBetweenAlphaNumeric(tag)
