@@ -48,13 +48,6 @@ var subtitle = obj['city'] + ' ' + obj['query'];
 var description = '\n';
 description = description + 'IP: '+ obj['query'] + '\n\n';
 description = description + '服务商: '+ obj['isp'] + '\n\n';
-description = description + '组织: '+ obj['asname'] + '\n\n';
-if (obj['hosting'] == false || obj['mobile'] == false){
-  description = description + '类型: 家宽\n\n';
-  title = title + ' 家宽'
-}else{
-  description = description + '类型: 机房\n\n';
-}
 description = description + '国家: '+ obj['country'] + '\n\n';
 description = description + '地区: '+ obj['regionName'] + '\n\n';
 description = description + '城市: '+ City_ValidCheck(obj['city']) + '\n\n';
