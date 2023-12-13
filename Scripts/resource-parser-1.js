@@ -1,5 +1,5 @@
 /**
- ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-12-13 09:30⟧
+ ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-12-13 13:57⟧
 
  🤖 主要功能:
  ❶ 将其它格式的⟦服务器订阅⟧解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
@@ -331,9 +331,9 @@ function serverNameReplace(tag){
     "GR": "希腊",
     "New Zealand": "新西兰",
     "NZ": "新西兰",
-    "United Arab Emirates":"阿拉伯联合酋长国",
-    "AE":"阿拉伯联合酋长国",
-    "UAE":"阿拉伯联合酋长国",
+    "United Arab Emirates":"阿联酋",
+    "AE":"阿联酋",
+    "UAE":"阿联酋",
     "Ukraine":"乌克兰",
     "Ireland":"爱尔兰",
     "Czech":"捷克",
@@ -367,6 +367,7 @@ function serverNameReplace(tag){
     "香港T":"HKT",
     "香港BN":"HKBN",
     "加拿大T":"CAT",
+    "迪拜":"阿联酋",
   }
 
   tag = addSpaceBetweenAlphaNumeric(tag)
@@ -2570,7 +2571,7 @@ function get_emoji(emojip, sname) {
     "🏳️‍🌈": ["流量", "套餐", "剩余", "重置", "到期" , "时间", "应急", "过期", "Bandwidth", "expire", "Traffic", "traffic"],
     "🇴🇲": ["阿曼", " OM "],
     "🇦🇩": ["安道尔","安道爾", "Andorra"],
-    "🇦🇪": ["阿拉伯联合酋长国"],
+    "🇦🇪": ["阿联酋"],
     "🇦🇴": ["安哥拉"],
     "🇦🇫": ["阿富汗"],
     "🇩🇿": ["阿尔及利亚","阿爾及利亞"],
