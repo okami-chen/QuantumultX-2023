@@ -1,5 +1,5 @@
 /**
- ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-12-13 13:57⟧
+ ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-12-13 14:03⟧
 
  🤖 主要功能:
  ❶ 将其它格式的⟦服务器订阅⟧解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
@@ -265,6 +265,8 @@ function serverNameReplace(tag){
     "KR":"韩国",
     "United States":"美国",
     "US":"美国",
+    "Thailand": "泰国",
+    "TH":"泰国",
     "Canada": "加拿大",
     "CA": "加拿大",
     "Australia": "澳大利亚",
@@ -325,8 +327,6 @@ function serverNameReplace(tag){
     "ID": "印度尼西亚",
     "Malaysia": "马来西亚",
     "MY": "马来西亚",
-    "Thailand": "泰国",
-    "TH": "泰国",
     "Greece": "希腊",
     "GR": "希腊",
     "New Zealand": "新西兰",
