@@ -39,23 +39,22 @@ function Area_check(para) {
 }
 
 function replaceOrganization(name) {
-  const tmp = name.split(' ');
-  const t = tmp[0].split('-');
-  const replacements = {
-    'POLONETWORK': 'Tanaka',
-    'SERVERS': '',
-    'SERVER': '',
-    'NETWORKS': '',
-    'CLOUDFLARENET' : 'CLOUDFLARE',
-  };
-
-  for (const key in replacements) {
-    if (Object.prototype.hasOwnProperty.call(replacements, key)) {
-      t[0] = t[0].replace(new RegExp(key, 'gi'), replacements[key]);
+    const tmp = name.split(' ');
+    const t = tmp[0].split('-');
+    const replacements = {
+        'POLONETWORK': 'Tanaka',
+        'SERVERS': '',
+        'SERVER': '',
+        'NETWORKS': '',
+        'CLOUDFLARENET': 'CLOUDFLARE',
+    };
+    for (const key in replacements) {
+        if (replacements.hasOwnProperty(key)) {
+            const regex = new RegExp(key, 'g');
+            t[0] = t[0].replace(regex, replacements[key]);
+        }
     }
-  }
-
-  return t[0].charAt(0).toUpperCase() + t[0].slice(1).toLowerCase();
+    return t[0].charAt(0).toUpperCase() + t[0].slice(1).toLowerCase();
 }
 
 
