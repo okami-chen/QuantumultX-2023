@@ -88,8 +88,13 @@ var body = $response.body;
 var obj = JSON.parse(body);
 var ip = obj['query'];
 
-var title = flags.get(obj['countryCode']) + ' '+obj['country']  + ' ' + replaceOrganization(obj['isp'])
-var subtitle = obj['regionName']+ ' ' + obj['city'] + ' ' + obj['query'];
+var title = flags.get(obj['countryCode']) + ' ' + obj['country']  + ' ' + replaceOrganization(obj['isp'])
+if(obj['country'] == obj['city']){
+  var subtitle = obj['regionName']+ ' ' + obj['query'];
+}else{
+  var subtitle = obj['regionName']+ ' ' + obj['city'] + ' ' + obj['query'];
+}
+
 var description = '\n';
 description = description + 'IP: '+ obj['query'] + '\n\n';
 description = description + '服务商: '+ obj['isp'] + '\n\n';
