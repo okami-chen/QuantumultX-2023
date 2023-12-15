@@ -45,7 +45,8 @@ function replaceOrganization(name) {
     'POLONETWORK': 'Tanaka',
     'SERVERS': '',
     'SERVER': '',
-    'NETWORKS': ''
+    'NETWORKS': '',
+    'CLOUDFLARENET' : 'CLOUDFLARE',
   };
 
   for (const key in replacements) {
