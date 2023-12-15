@@ -88,7 +88,7 @@ var body = $response.body;
 var obj = JSON.parse(body);
 var ip = obj['query'];
 
-var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['city'] + ' ' + obj['isp']
+var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['city'] + ' ' + replaceOrganization(obj['isp'])
 var subtitle = obj['regionName'] + ' ' + obj['query'];
 var description = '\n';
 description = description + 'IP: '+ obj['query'] + '\n\n';
