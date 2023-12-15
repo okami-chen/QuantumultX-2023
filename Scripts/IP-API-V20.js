@@ -38,6 +38,25 @@ function Area_check(para) {
   }
 }
 
+function replaceOrganization(name) {
+  const tmp = name.split(' ');
+  const t = tmp[0].split('-');
+  const replacements = {
+    'POLONETWORK': 'Tanaka',
+    'SERVERS': '',
+    'SERVER': '',
+    'NETWORKS': ''
+  };
+
+  for (const key in replacements) {
+    if (Object.prototype.hasOwnProperty.call(replacements, key)) {
+      t[0] = t[0].replace(new RegExp(key, 'gi'), replacements[key]);
+    }
+  }
+
+  return t[0].charAt(0).toUpperCase() + t[0].slice(1).toLowerCase();
+}
+
 
 var flags = new Map([
   [ "AC" , "🇦🇨" ] ,["AE","🇦🇪"], [ "AF" , "🇦🇫" ] , [ "AI" , "🇦🇮" ] , [ "AL" , "🇦🇱" ] , [ "AM" , "🇦🇲" ] ,
@@ -69,8 +88,8 @@ var body = $response.body;
 var obj = JSON.parse(body);
 var ip = obj['query'];
 
-var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['regionName']
-var subtitle = obj['city'] + ' ' + obj['query'];
+var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['city'] + '' +replaceOrganization(obj['isp'])
+var subtitle = obj['regionName'] + ' ' + obj['query'];
 var description = '\n';
 description = description + 'IP: '+ obj['query'] + '\n\n';
 description = description + '服务商: '+ obj['isp'] + '\n\n';
