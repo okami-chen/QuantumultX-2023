@@ -89,18 +89,18 @@ var body = $response.body;
 var obj = JSON.parse(body);
 var ip = obj['query'];
 
-var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['city'] + '' +replaceOrganization(obj['isp'])
+var title = flags.get(obj['countryCode']) + ' '+obj['country'] + ' ' + obj['city'] + ' ' +replaceOrganization(obj['isp'])
 var subtitle = obj['regionName'] + ' ' + obj['query'];
 var description = '\n';
-description = description + 'IP: '+ obj['query'] + '\n\n';
-description = description + '服务商: '+ obj['isp'] + '\n\n';
-description = description + '国家: '+ obj['country'] + '\n\n';
-description = description + '地区: '+ obj['regionName'] + '\n\n';
-description = description + '城市: '+ City_ValidCheck(obj['city']) + '\n\n';
-description = description + '邮编: '+ obj['zip'] + '\n\n';
-description = description + '时区: '+ obj['timezone'] + '\n\n';
-description = description + '经度: '+ obj['lon'] + '\n\n';
-description = description + '纬度: '+ obj['lat'] + '\n\n';
+description = description + 'IP: '+ obj['query'] + '\n';
+description = description + '服务商: '+ obj['isp'] + '\n';
+description = description + '国家: '+ obj['country'] + '\n';
+description = description + '地区: '+ obj['regionName'] + '\n';
+description = description + '城市: '+ City_ValidCheck(obj['city']) + '\n';
+description = description + '邮编: '+ obj['zip'] + '\n';
+description = description + '时区: '+ obj['timezone'] + '\n';
+description = description + '经度: '+ obj['lon'] + '\n';
+description = description + '纬度: '+ obj['lat'] + '\n';
 $done({title, subtitle, ip, description});
 
 
