@@ -51,10 +51,10 @@ function replaceOrganization(name) {
     for (const key in replacements) {
         if (replacements.hasOwnProperty(key)) {
             const regex = new RegExp(key, 'g');
-            t[0] = t[0].replace(regex, replacements[key]);
+            tmp[0] = tmp[0].replace(regex, replacements[key]);
         }
     }
-    return t[0].charAt(0).toUpperCase() + t[0].slice(1).toLowerCase();
+    return tmp[0].charAt(0).toUpperCase() + tmp[0].slice(1).toLowerCase();
 }
 
 
