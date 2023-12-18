@@ -47,7 +47,7 @@ function replaceOrganization(name) {
         'SERVER': '',
         'NETWORKS': '',
         'CLOUDFLARENET': 'CLOUDFLARE',
-        ',': '',
+        ',': ' ',
     };
     for (const key in replacements) {
         if (replacements.hasOwnProperty(key)) {
