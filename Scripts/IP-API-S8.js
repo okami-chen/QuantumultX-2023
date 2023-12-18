@@ -55,7 +55,8 @@ function replaceOrganization(name) {
             tmp[0] = tmp[0].replace(regex, replacements[key]);
         }
     }
-    return tmp[0].charAt(0).toUpperCase() + tmp[0].slice(1).toLowerCase();
+    const trimmedResult = tmp[0].charAt(0).toUpperCase() + tmp[0].slice(1).toLowerCase();
+    return trimmedResult.trim();
 }
 
 
