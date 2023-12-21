@@ -39,6 +39,8 @@ function Area_check(para) {
 }
 
 function replaceOrganization(name) {
+    name = name.replace("Hong Kong Broadband", "HKBN");
+  name = name.replace("Hong Kong", "HKT");
     const tmp = name.split(' ');
     const t = tmp[0].split('-');
     const replacements = {
