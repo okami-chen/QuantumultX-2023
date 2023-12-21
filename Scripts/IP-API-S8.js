@@ -57,7 +57,7 @@ function replaceOrganization(name) {
             tmp[0] = tmp[0].replace(regex, replacements[key]);
         }
     }
-    const trimmedResult = tmp[0].charAt(0).toUpperCase() + tmp[0].slice(1).toLowerCase();
+    const trimmedResult = tmp[0].charAt(0).toUpperCase() + tmp[0].slice(1).toUpperCase();
     const ret = trimmedResult.trim();
     if (ret == "Hkt" || ret == "Hkbn"){
       return ret.toUpperCase()
