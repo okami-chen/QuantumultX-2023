@@ -106,6 +106,7 @@ if(obj['country'] == obj['city']){
 var description = '\n';
 description = description + 'IP: '+ obj['query'] + '\n\n';
 description = description + '服务商: '+ obj['isp'] + '\n\n';
+description = description + '组织: '+ obj['org'] + '\n\n';
 description = description + '国家: '+ obj['country'] + '\n\n';
 description = description + '地区: '+ obj['regionName'] + '\n\n';
 description = description + '城市: '+ City_ValidCheck(obj['city']) + '\n\n';
