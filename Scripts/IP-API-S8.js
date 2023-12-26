@@ -96,7 +96,7 @@ var body = $response.body;
 var obj = JSON.parse(body);
 var ip = obj['query'];
 
-var title = flags.get(obj['countryCode']) + ' ' + obj['country']  + ' ' + replaceOrganization(obj['isp'])
+var title = flags.get(obj['countryCode']) + ' ' + obj['country']  + ' ' + replaceOrganization(obj['org'])
 if(obj['country'] == obj['city']){
   var subtitle = obj['regionName']+ ' ' + obj['query'];
 }else{
