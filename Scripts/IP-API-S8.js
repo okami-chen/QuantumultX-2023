@@ -59,7 +59,7 @@ function replaceOrganization(name) {
     }
     const trimmedResult = tmp[0].charAt(0).toUpperCase() + tmp[0].slice(1).toLowerCase();
     const ret = trimmedResult.trim();
-    if (ret.length === 2 || ret.length === 3) {
+    if (ret.length === 2 || ret.length === 3 || ret =='Hkbn') {
       return ret.toUpperCase();
     }
     return ret;
