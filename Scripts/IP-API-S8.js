@@ -96,11 +96,12 @@ var body = $response.body;
 var obj = JSON.parse(body);
 var ip = obj['query'];
 
-  var title = flags.get(obj['countryCode']) + ' ' + obj['country']  + ' ' + obj['regionName']
 if(obj['country'] == obj['city']){
+  var title = flags.get(obj['countryCode']) + ' ' + obj['country']  + ' ' + obj['regionName']
   var subtitle = obj['city']+ ' ' + replaceOrganization(obj['isp'])  + ' ' + obj['query'];
 }else{
-  var subtitle = obj['city']+ ' ' + replaceOrganization(obj['isp']) + ' ' + obj['query'];
+  var title = flags.get(obj['countryCode']) + ' ' + obj['country']  + ' ' + obj['city']
+  var subtitle = obj['regionName']+ ' ' + replaceOrganization(obj['isp']) + ' ' + obj['query'];
 }
 
 var description = '\n';
