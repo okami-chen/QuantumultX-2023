@@ -39,7 +39,7 @@ function Area_check(para) {
 function replaceOrganization(name) {
   name = name.replace("Hong Kong Broadband", "HKBN");
   name = name.replace("Hong Kong", "HKT");
-  name = name.replace("KowLoon", "九龙");
+  name = name.replace("Kowloon", "九龙");
   name = name.replace("Twuen Wan", "荃湾");
   name = name.replace("Cheung Sha Wan", "长沙湾");
   const tmp = name.split(" ");
