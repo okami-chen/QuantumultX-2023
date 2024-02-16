@@ -36,6 +36,13 @@ function Area_check(para) {
   }
 }
 
+function replaceRegion(name) {
+  name = name.replace("Kowloon", "九龙");
+  name = name.replace("Tsuen Wan", "荃湾");
+  name = name.replace("Cheung Sha Wan", "长沙湾");
+  return name;
+}
+
 function replaceOrganization(name) {
   name = name.replace("Hong Kong Broadband", "HKBN");
   name = name.replace("Hong Kong", "HKT");
@@ -118,11 +125,11 @@ if (obj["query"].includes("45.132.114.")) {
 }
 
 if (obj["country"] == obj["city"]) {
-  var title = flags.get(obj["countryCode"]) + " " + obj["country"] + " " + obj["regionName"];
+  var title = flags.get(obj["countryCode"]) + " " + replaceRegion(obj["country"]) + " " + replaceRegion(obj["regionName"]);
   var subtitle = obj["city"] + " " + replaceOrganization(obj["isp"]) + " " + obj["query"];
 } else {
-  var title = flags.get(obj["countryCode"]) + " " + obj["country"] + " " + obj["city"];
-  var subtitle = obj["regionName"] + " " + replaceOrganization(obj["isp"]) + " " + obj["query"];
+  var title = flags.get(obj["countryCode"]) + " " + obj["country"] + " " + replaceRegion(obj["city"]);
+  var subtitle = replaceRegion(obj["regionName"]) + " " + replaceOrganization(obj["isp"]) + " " + obj["query"];
 }
 
 var description = "\n";
@@ -130,8 +137,8 @@ description = description + "IP: " + obj["query"] + "\n\n";
 description = description + "服务商: " + obj["isp"] + "\n\n";
 description = description + "组织: " + obj["org"] + "\n\n";
 description = description + "国家: " + obj["country"] + "\n\n";
-description = description + "地区: " + obj["regionName"] + "\n\n";
-description = description + "城市: " + City_ValidCheck(obj["city"]) + "\n\n";
+description = description + "地区: " + replaceRegion(obj["regionName"]) + "\n\n";
+description = description + "城市: " + replaceRegion(obj["city"]) + "\n\n";
 description = description + "邮编: " + obj["zip"] + "\n\n";
 description = description + "时区: " + obj["timezone"] + "\n\n";
 description = description + "经度: " + obj["lon"] + "\n\n";
