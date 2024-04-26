@@ -124,7 +124,7 @@ if (obj["query"].includes("45.132.114.")) {
 
 if (obj["country"] == obj["city"]) {
   var title = flags.get(obj["countryCode"]) + " " + replaceRegion(obj["country"]) + " " + replaceRegion(obj["regionName"]);
-  var subtitle = obj["city"] + " " + replaceOrganization(obj["isp"]) + " " + obj["query"];
+  var subtitle = replaceOrganization(obj["isp"]) + " " + obj["query"];
 } else {
   var title = flags.get(obj["countryCode"]) + " " + obj["country"] + " " + replaceRegion(obj["city"]);
   var subtitle = replaceRegion(obj["regionName"]) + " " + replaceOrganization(obj["isp"]) + " " + obj["query"];
