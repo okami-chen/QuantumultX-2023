@@ -37,6 +37,7 @@ function Area_check(para) {
 }
 
 function replaceRegion(name) {
+  return name;
   const replacements = {
       'South West' => '西南',
       'South East' => '东南',
