@@ -37,18 +37,17 @@ function Area_check(para) {
 }
 
 function replaceRegion(name) {
-  name = name.replace("South West" , "西南");
-  name = name.replace("South East" , "东南");
-  name = name.replace("North West" , "西北");
-  name = name.replace("North East" , "东北");
-  name = name.replace("Central Singapore" , "中部");
+  name = name.replace("South West" , "西南地区");
+  name = name.replace("South East" , "东南地区");
+  name = name.replace("North West" , "西北地区");
+  name = name.replace("North East" , "东北地区");
+  name = name.replace("Central Singapore" , "中部地区");
   name = name.replace("Caloocan City" , "加洛坎");
   name = name.replace("Phường Mười Lăm" , "第十五区");
   name = name.replace("Tsuen Wan District" , "荃湾");
   name = name.replace("Tsuen Wan" , "荃湾");
   name = name.replace("Semiband" , "Semi");
-  name = name.replace("特别市" , "");
-  name = name.replace("市" , "");
+  name = name.replace("特别市" , "市");
   name = name.replace("Googlewifi" , "G-wifi");
   name = name.replace("Panama City" , "巴拿马");
   name = name.replace("Fuentes del Valle" , "墨西哥");
