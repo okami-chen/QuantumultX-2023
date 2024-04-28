@@ -160,6 +160,12 @@ function replaceRegion(name) {
 }
 
 function replaceOrganization(name) {
+  name = name.replace("-"," ");
+  name = name.replace(","," ");
+  name = name.replace("Ram","eons");
+  name = name.replace("Proxy","eons");
+  name = name.replace("PCCW","hkt");
+  name = name.replace("ShangHai","jinx");
   name = name.replace("Hong Kong Broadband", "HKBN");
   name = name.replace("Hong Kong", "HKT");
   name = name.replace("Kowloon", "九龙");
