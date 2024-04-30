@@ -158,6 +158,9 @@ function replaceRegion(name) {
   name = name.replace("Quận Thanh Khê" , "清溪郡");
   name = name.replace("Tseung Kwan O', '新界");
   name = name.replace("Tsing Yi', '新界");
+  name = name.replace("Kowloon", "九龙");
+  name = name.replace("Tsuen Wan", "荃湾");
+  name = name.replace("Cheung Sha Wan", "长沙湾");
   return name;
 }
 
@@ -169,10 +172,7 @@ function replaceOrganization(name) {
   name = name.replace("PCCW","hkt");
   name = name.replace("ShangHai","jinx");
   name = name.replace("Hong Kong Broadband", "HKBN");
-  name = name.replace("Hong Kong", "HKT");
-  name = name.replace("Kowloon", "九龙");
-  name = name.replace("Tsuen Wan", "荃湾");
-  name = name.replace("Cheung Sha Wan", "长沙湾");
+  name = name.replace("Companhia", "CTM");
   const tmp = name.split(" ");
   const t = tmp[0].split("-");
   const replacements = {
