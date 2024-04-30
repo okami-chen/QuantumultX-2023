@@ -36,7 +36,7 @@ function Area_check(para) {
   }
 }
 
-function replaceRegion(name) {
+function ReplaceRegion(name) {
   name = name.replace("South West" , "西南地区");
   name = name.replace("South East" , "东南地区");
   name = name.replace("North West" , "西北地区");
@@ -164,7 +164,7 @@ function replaceRegion(name) {
   return name;
 }
 
-function replaceOrganization(name) {
+function ReplaceOrganization(name) {
   name = name.replace("-"," ");
   name = name.replace(","," ");
   name = name.replace("Ram","eons");
@@ -175,6 +175,7 @@ function replaceOrganization(name) {
   name = name.replace("Companhia", "CTM");
   name = name.replace("Hong","HKBN");
   name = name.replace("China","CMHK");
+  name = name.replace("OneAsiaHost","OneAsia");
   const tmp = name.split(" ");
   const t = tmp[0].split("-");
   const replacements = {
@@ -252,11 +253,11 @@ if (obj["query"].includes("45.132.114.")) {
 }
 
 if (obj["country"] == obj["city"]) {
-  var title = flags.get(obj["countryCode"]) + " " + replaceRegion(obj["country"]) + " " + replaceRegion(obj["regionName"]);
-  var subtitle = replaceOrganization(obj["isp"]) + " " + obj["query"];
+  var title = flags.get(obj["countryCode"]) + " " + ReplaceRegion(obj["country"]) + " " + ReplaceRegion(obj["regionName"]);
+  var subtitle = ReplaceOrganization(obj["isp"]) + " " + obj["query"];
 } else {
-  var title = flags.get(obj["countryCode"]) + " " + obj["country"] + " " + replaceRegion(obj["city"]);
-  var subtitle = replaceRegion(obj["regionName"]) + " " + replaceOrganization(obj["isp"]) + " " + obj["query"];
+  var title = flags.get(obj["countryCode"]) + " " + obj["country"] + " " + ReplaceRegion(obj["city"]);
+  var subtitle = ReplaceRegion(obj["regionName"]) + " " + ReplaceOrganization(obj["isp"]) + " " + obj["query"];
 }
 
 var description = "\n";
@@ -264,8 +265,8 @@ description = description + "IP: " + obj["query"] + "\n\n";
 description = description + "服务商: " + obj["isp"] + "\n\n";
 description = description + "组织: " + obj["org"] + "\n\n";
 description = description + "国家: " + obj["country"] + "\n\n";
-description = description + "地区: " + replaceRegion(obj["regionName"]) + "\n\n";
-description = description + "城市: " + replaceRegion(obj["city"]) + "\n\n";
+description = description + "地区: " + ReplaceRegion(obj["regionName"]) + "\n\n";
+description = description + "城市: " + ReplaceRegion(obj["city"]) + "\n\n";
 description = description + "邮编: " + obj["zip"] + "\n\n";
 description = description + "时区: " + obj["timezone"] + "\n\n";
 description = description + "经度: " + obj["lon"] + "\n\n";
