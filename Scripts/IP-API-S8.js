@@ -156,6 +156,8 @@ function replaceRegion(name) {
   name = name.replace("Shibuya" , "涩谷区");
   name = name.replace("Quan Chin" , "胡志明市");
   name = name.replace("Quận Thanh Khê" , "清溪郡");
+  name = name.replace("Tseung Kwan O', '新界");
+  name = name.replace("Tsing Yi', '新界");
   return name;
 }
 
