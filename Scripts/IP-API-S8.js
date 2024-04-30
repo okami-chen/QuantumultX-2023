@@ -173,6 +173,8 @@ function replaceOrganization(name) {
   name = name.replace("ShangHai","jinx");
   name = name.replace("Hong Kong Broadband", "HKBN");
   name = name.replace("Companhia", "CTM");
+  name = name.replace("Hong","HKBN");
+  name = name.replace("China","CMHK");
   const tmp = name.split(" ");
   const t = tmp[0].split("-");
   const replacements = {
