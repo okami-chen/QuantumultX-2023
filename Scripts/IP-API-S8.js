@@ -161,10 +161,21 @@ function ReplaceRegion(name) {
   name = name.replace("Kowloon", "九龙");
   name = name.replace("Tsuen Wan", "荃湾");
   name = name.replace("Cheung Sha Wan", "长沙湾");
+  name = name.replace("San Jose" , "圣荷西");
+  name = name.replace("Sakuragawa" , "樱川市");
+  name = name.replace("Port Melbourne" , "墨尔本");
+  name = name.replace("Honchō" , "本庄市");
+  name = name.replace( "Ashburn" , "阿什本");
+  name = name.replace("Chiyoda" , "千代田区");
+  name = name.replace("Frankfurt" , "法兰克福");
+  name = name.replace("Yerevan" , "耶烈万");
+  name = name.replace("Bağcılar" , "巴哲拉尔");
+  name = name.replace("Kartal" , "卡尔塔尔");
   return name;
 }
 
 function ReplaceOrganization(name) {
+  name = name.replace("net","");
   name = name.replace("-"," ");
   name = name.replace(","," ");
   name = name.replace("Ram","eons");
