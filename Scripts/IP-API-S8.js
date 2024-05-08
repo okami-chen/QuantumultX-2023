@@ -153,7 +153,7 @@ function ReplaceRegion(name) {
   name = name.replace("Tanjung Tokong" , "槟城州");
   name = name.replace("Shiomi" , "东京都");
   name = name.replace("Olsztyn" , "奥尔什丁");
-  name = name.replace("Shibuya" , "涩谷区");
+  name = name.replace("Shibuya" , "东京");
   name = name.replace("Quan Chin" , "胡志明市");
   name = name.replace("Quận Thanh Khê" , "清溪郡");
   name = name.replace("Tseung Kwan O', '新界");
