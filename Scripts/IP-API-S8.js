@@ -171,6 +171,21 @@ function ReplaceRegion(name) {
   name = name.replace("Yerevan" , "耶烈万");
   name = name.replace("Bağcılar" , "巴哲拉尔");
   name = name.replace("Kartal" , "卡尔塔尔");
+  name = name.replace("Kitamachi" , "新宿区);
+  name = name.replace("Maebashi" , "前桥市);
+  name = name.replace("Seocho-gu" , "首尔市);
+  name = name.replace("Pasig" , "帕西格市);
+  name = name.replace("Goyang-si" , "高阳市);
+  name = name.replace("Kefar Masaryk" , "西加利利);
+  name = name.replace("Erbil" , "埃尔比勒);
+  name = name.replace("奧克蘭都會區" , "奥克兰);
+  name = name.replace("Viana do Castelo" , "维亚纳堡);
+  name = name.replace("Princes Town" , "王子镇);
+  name = name.replace("Saliña" , "萨利纳);
+  name = name.replace("Salina" , "萨利纳);
+  name = name.replace("Coxen Hole" , "罗阿坦);
+  name = name.replace("Bamako" , "巴马科);
+  name = name.replace("Belas" , "贝拉斯);
   return name;
 }
 
