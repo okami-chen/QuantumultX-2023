@@ -151,7 +151,7 @@ function ReplaceRegion(name) {
   name = name.replace("Sheung Yuen Leng" , "九龙");
   name = name.replace("Hakusan" , "白山");
   name = name.replace("Tanjung Tokong" , "槟城州");
-  name = name.replace("Shiomi" , "东京都");
+  name = name.replace("Shiomi" , "东京");
   name = name.replace("Olsztyn" , "奥尔什丁");
   name = name.replace("Shibuya" , "东京");
   name = name.replace("Quan Chin" , "胡志明市");
