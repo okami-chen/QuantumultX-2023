@@ -186,6 +186,28 @@ function ReplaceRegion(name) {
   name = name.replace("Coxen Hole" , "罗阿坦");
   name = name.replace("Bamako" , "巴马科");
   name = name.replace("Belas" , "贝拉斯");
+  name = name.replace("Vinhedo" , "维涅杜");
+  name = name.replace("St. Julian's" , "圣朱利安斯");
+  name = name.replace("Mariehamn" , "玛丽港");
+  name = name.replace("Kashar" , "卡沙尔");
+  name = name.replace("Le Port" , "勒波尔");
+  name = name.replace("Andheri" , "孟买");
+  name = name.replace("Rosh Haayin" , "罗什艾因");
+  name = name.replace("Kanamechō" , "都丰岛区");
+  name = name.replace("西雅圖" , "西雅图");
+  name = name.replace("班加羅爾" , "班加罗尔");
+  name = name.replace("Miyakami" , "神奈川县");
+  name = name.replace("倫敦金融城" , "金融城");
+  name = name.replace("Shek Kip Mei" , "九龙");
+  name = name.replace("桃園區" , "桃园");
+  name = name.replace("Cyberjaya" , "赛城");
+  name = name.replace("Cầu Giấy District" , "纸桥郡");
+  name = name.replace("Koishikawa" , "小石川");
+  name = name.replace("Vinkeveen" , "芬克芬");
+  name = name.replace("Quan Binh Thanh" , "平盛郡");
+  name = name.replace("Yenişehir" , "耶尼谢希尔");
+  name = name.replace("Falkenstein" , "法尔肯施泰因");
+  name = name.replace("Yongin-si" , "龙仁市");
   return name;
 }
 
