@@ -224,6 +224,12 @@ function ReplaceOrganization(name) {
   name = name.replace("Hong","HKBN");
   name = name.replace("China","CMHK");
   name = name.replace("OneAsiaHost","OneAsia");
+  name = name.replace("Chunghwa" => "中华电信");
+  name = name.replace("China" => "CMHK");
+  name = name.replace("OneAsiaHost" => "OneAsia");
+  name = name.replace("Cloudflare" => "CF");
+  name = name.replace("Fiberstate" => "SLC");
+  name = name.replace("Sharktech" => "Shark");
   const tmp = name.split(" ");
   const t = tmp[0].split("-");
   const replacements = {
