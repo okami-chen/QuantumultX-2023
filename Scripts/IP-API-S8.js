@@ -208,6 +208,12 @@ function ReplaceRegion(name) {
   name = name.replace("Yenişehir" , "耶尼谢希尔");
   name = name.replace("Falkenstein" , "法尔肯施泰因");
   name = name.replace("Yongin-si" , "龙仁市");
+  name = name.replace("West Byfleet", "西拜弗利特");
+  name = name.replace("Keng Hau", "径口");
+  name = name.replace("St Petersburg", "圣彼得堡");
+  name = name.replace("Sofia", "索非亚");
+  name = name.replace("Taipei", "台北");
+  name = name.replace("Wien", "维也纳");
   return name;
 }
 
