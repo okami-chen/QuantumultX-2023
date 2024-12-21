@@ -233,7 +233,7 @@ function ReplaceOrganization(name) {
   name = name.replace("Chunghwa" , "中华电信");
   name = name.replace("China" , "CMHK");
   name = name.replace("OneAsiaHost" , "OneAsia");
-  name = name.replace("Ram" , "Esons");
+  name = name.replace("RAM" , "Eons");
   name = name.replace("Fiberstate" , "SLC");
   name = name.replace("Sharktech" , "Shark");
   const tmp = name.split(" ");
