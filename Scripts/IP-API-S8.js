@@ -221,10 +221,10 @@ function ReplaceOrganization(name) {
   name = name.replace("net","");
   name = name.replace("-"," ");
   name = name.replace(","," ");
-  name = name.replace("Ram","eons");
-  name = name.replace("Proxy","eons");
-  name = name.replace("PCCW","hkt");
-  name = name.replace("ShangHai","jinx");
+  name = name.replace("Ram","Eons");
+  name = name.replace("Proxy","Eons");
+  name = name.replace("PCCW","HKT");
+  name = name.replace("ShangHai","Jinx");
   name = name.replace("Hong Kong Broadband", "HKBN");
   name = name.replace("Companhia", "CTM");
   name = name.replace("Hong","HKBN");
